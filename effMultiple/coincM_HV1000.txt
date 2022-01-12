@@ -1,8 +1,9 @@
-config (top to bottom): G1 - M - G2
+config (top to bottom): G1 - M - G2 - time 300s
 Giove: thr 82.3, HV=1050V - singles are the counts of G1
 Giunone: thr 72.2, HV=1050V
 thr	sing	double	triple
 130	9145	5056	4684
 120.1	9114	5014	4811
 110.1	8924	4948	4802
-
+100.0	24602	5553	5462
+90.0	24580	5513	5451

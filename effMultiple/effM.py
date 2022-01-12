@@ -20,8 +20,7 @@ mynp950 = getfile(950)
 eff950, err950 = efficiency(mynp950)
 mynp1000 = getfile(1000)
 eff1000, err1000 = efficiency(mynp1000)
-#print (mynp950[0])
-#print (eff950)
+
 '''
 ax = plt.figure(figsize=(7,5), dpi=100,facecolor="w").add_subplot(111)
 plt.suptitle("Scintillator responses HV=1000V t=100s")
@@ -49,5 +48,16 @@ print("\n HV 1000V")
 for i in range(np.size(eff1000)):
     print ("thr: ", round(mynp1000[0][i],3), " eff: ", round(eff1000[i],3), " +- ", round(err1000[i],3))
 
+x = [950, 1000]
+x = np.asarray(x)
 
+ax = plt.axis[0, 0]
+c = ax.pcolor(950, round(mynp950[0,:],3) , round(eff950[:],3), cmap='RdBu', vmin=z_min, vmax=z_max)
+ax.set_title('pcolor')
+# set the limits of the plot to the limits of the data
+ax.axis([x.min(), x.max(), y.min(), y.max()])
+fig.colorbar(c, ax=ax)
+
+
+plt.show()
 

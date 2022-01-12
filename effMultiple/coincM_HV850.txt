@@ -1,3 +1,5 @@
+# non usare!!!
+
 config (top->bottom): G1(32.1) - M - G2(32)
 rate	thrG1	thrG2	thrM	triple	double	single
 20	50.3	44.1	54.8	1940.	2811.	6222.
